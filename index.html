@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Health Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Personal Health Assistant</h1>
+        <p>Your companion for a healthier life.</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#bmi-section">BMI Calculator</a></li>
+            <li><a href="#water-section">Water Tracker</a></li>
+            <li><a href="#symptom-section">Symptom Checker</a></li>
+            <li><a href="#tips-section">Health Tips</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- BMI Calculator Section -->
+    <section id="bmi-section">
+        <h2>BMI Calculator</h2>
+        <form id="bmiForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required>
+            
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" step="0.01" required>
+            
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+        <p id="bmiResult"></p>
+    </section>
+
+    <!-- Water Intake Tracker Section -->
+    <section id="water-section">
+        <h2>Daily Water Intake Tracker</h2>
+        <p>Keep track of your daily water consumption.</p>
+        <form id="waterForm">
+            <label for="water">Water Intake (liters):</label>
+            <input type="number" id="water" step="0.1" required>
+            
+            <button type="button" onclick="trackWater()">Track Water</button>
+        </form>
+        <p id="waterResult"></p>
+    </section>
+
+    <!-- Symptom Checker Section -->
+    <section id="symptom-section">
+        <h2>Symptom Checker</h2>
+        <p>Enter your symptoms, and we'll provide general health advice.</p>
+        <form id="symptomForm">
+            <textarea id="symptoms" placeholder="Describe your symptoms..." required></textarea>
+            
+            <button type="button" onclick="checkSymptoms()">Check Symptoms</button>
+        </form>
+        <p id="symptomResult"></p>
+    </section>
+
+    <!-- Health Tips Section -->
+    <section id="tips-section">
+        <h2>Daily Health Tips</h2>
+        <p>Stay healthy with our daily health tips.</p>
+        <ul id="healthTips">
+            <li>Drink at least 8 glasses of water daily.</li>
+            <li>Exercise for at least 30 minutes a day.</li>
+            <li>Eat more fruits and vegetables.</li>
+            <li>Get at least 7-8 hours of sleep every night.</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Personal Health Assistant. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel = "stylesheet"hrel="style.css">
+
+    <p>Hello</p>
+</body>
+<script src="index.js"></script>
+</html>
